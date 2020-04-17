@@ -3,10 +3,10 @@ namespace pattern_command
     public class Button
     {
         public string Text { get; set; }
-
-        public void OnClick()
+        public Command OnClick { get; set; }
+        public void Click()
         {
-
+            OnClick.Execute();
         }
     }
 }
